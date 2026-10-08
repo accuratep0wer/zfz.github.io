@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#16332d" />
+  <meta name="description" content="Wingspan bird card sorter — mobile-friendly bilingual reference." />
+  <title>Wingspan Bird Atlas · 展翅翱翔双语鸟牌图鉴</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">WINGSPAN · 展翅翱翔</div>
+      <h1 id="appTitle">鸟牌图鉴 · 双语排序器</h1>
+    </div>
+    <button id="langBtn" class="lang-btn" aria-label="Switch language">EN</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p id="heroText">按鸟名、分数、能力、栖息地与食物成本搜索、筛选和排序 Wingspan 鸟牌。每张牌显示中英文名称与 Wingsearch 鸟类画像。</p>
+        <div class="stats-row">
+          <div><strong id="visibleCount">—</strong><span id="visibleLabel">显示</span></div>
+          <div><strong id="totalCount">—</strong><span id="totalLabel">总牌数</span></div>
+          <div><strong id="avgPoints">—</strong><span id="avgLabel">平均分</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="filters">
+      <div class="search-row">
+        <label class="search-box">
+          <span>⌕</span>
+          <input id="searchInput" type="search" autocomplete="off" placeholder="搜索鸟名 / 学名 / 能力…" />
+        </label>
+        <button id="filterToggle" class="secondary-btn">筛选</button>
+      </div>
+
+      <div class="sort-row">
+        <label>
+          <span id="sortLabel">排序</span>
+          <select id="sortSelect">
+            <option value="points">分数</option>
+            <option value="name">鸟名</option>
+            <option value="eggs">蛋容量</option>
+            <option value="wingspan">翅展</option>
+            <option value="food">食物成本</option>
+            <option value="set">扩展</option>
+          </select>
+        </label>
+        <button id="sortDir" class="secondary-btn" title="Sort direction">↓</button>
+        <button id="viewToggle" class="secondary-btn" title="Toggle compact view">▦</button>
+      </div>
+
+      <div id="filterPanel" class="filter-panel hidden">
+        <div class="filter-group">
+          <h3 id="expansionHeading">扩展</h3>
+          <div id="expansionFilters" class="chips"></div>
+        </div>
+        <div class="filter-group">
+          <h3 id="habitatHeading">栖息地</h3>
+          <div id="habitatFilters" class="chips"></div>
+        </div>
+        <div class="filter-group">
+          <h3 id="powerHeading">能力颜色</h3>
+          <div id="powerFilters" class="chips"></div>
+        </div>
+        <div class="filter-group">
+          <h3 id="nestHeading">巢型</h3>
+          <div id="nestFilters" class="chips"></div>
+        </div>
+        <div class="range-grid">
+          <label><span id="minPointsLabel">最低分</span><input id="minPoints" type="number" min="0" max="15" inputmode="numeric" /></label>
+          <label><span id="maxPointsLabel">最高分</span><input id="maxPoints" type="number" min="0" max="15" inputmode="numeric" /></label>
+        </div>
+        <button id="resetBtn" class="reset-btn">重置筛选</button>
+      </div>
+    </section>
+
+    <section id="status" class="status">正在加载牌库…</section>
+    <section id="cards" class="cards" aria-live="polite"></section>
+  </main>
+
+  <dialog id="detailDialog">
+    <article id="detailCard" class="detail-card"></article>
+    <button id="closeDialog" class="close-dialog">关闭</button>
+  </dialog>
+
+  <footer>
+    <p id="footerText">非官方玩家工具。鸟类画像来自 Wingsearch 图像资源；并非实体桌游官方卡牌插画。</p>
+    <p><a href="README.md">README</a> · <a href="https://github.com/navarog/wingsearch" target="_blank" rel="noreferrer">Data source</a></p>
+  </footer>
+
+  <script src="zh-names.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
