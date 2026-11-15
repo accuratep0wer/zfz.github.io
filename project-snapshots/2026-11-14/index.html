@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>项目快照 · 2026-11-14</title>
+  <link rel="stylesheet" href="../../project-snapshots.css?v=20261114">
+</head>
+<body class="snapshot-page">
+  <header>
+    <a href="../../#project-snapshots">← accuratep0wer · 个人主页</a>
+    <h1>项目快照 <span lang="en">/ Project snapshots</span></h1>
+    <p class="snapshot-intro"><time datetime="2026-11-14">2026 年 11 月 14 日</time>的项目记录。这里保留当日的真实网页截图、简介与固定源码提交；在线演示链接指向持续更新的项目。</p>
+  </header>
+  <main>
+    <article id="hanzi-token-lab">
+      <h2>Hanzi Token Lab · 多语言 Token 对照台</h2>
+      <p class="snapshot-version">固定版本：<a href="https://github.com/accuratep0wer/hanzi-token-lab/tree/c3638228ebe1f3dd93f6bb866addca90b08f71d7"><code>c3638228ebe1f3dd93f6bb866addca90b08f71d7</code></a></p>
+      <p>一个浏览器端的多模型分词实验台。把同一段文字交给不同的 tokenizer，比较真实 token 数、彩色切分片段、ID 和 UTF-8 字节，并区分公开词表的正文切分与官方 API 的请求计数。</p>
+      <ul>
+        <li>支持中文、英语、西班牙语和日语；中文比较原文、繁体与简体，日语比较汉字假名混写原文与词典推导的两种假名读音。</li>
+        <li>内置八套公开 tokenizer，可按模型筛选，或增加公开 Hugging Face 词表；一个默认开启的开关统一显示所有 Token ID。</li>
+        <li>OpenAI、Claude 等 API 模型由访问者自行选择并提供个人 key；密钥保存在访问者的浏览器中，未选择的模型不发请求。</li>
+        <li>API 未提供的切分片段、ID 和内部向量维度保持未知。日语读音转换可能有歧义，不能作为日常书写规范。</li>
+      </ul>
+      <figure><a href="hanzi-token-lab.jpg"><img src="hanzi-token-lab.jpg" width="1020" height="744" alt="原文‘人工智能，让不同语言在同一张表里相遇。’的多模型彩色 token 与 ID 对比"></a><figcaption>从实际部署页面截取；仅使用本地公开词表，没有输入或展示 API key。</figcaption></figure>
+      <nav class="snapshot-links" aria-label="分词项目链接"><a href="https://accuratep0wer.github.io/hanzi-token-lab/">在线演示</a><a href="https://github.com/accuratep0wer/hanzi-token-lab">GitHub 仓库</a><a href="https://github.com/accuratep0wer/hanzi-token-lab/tree/c3638228ebe1f3dd93f6bb866addca90b08f71d7">此快照的源码</a></nav>
+    </article>
+    <article id="quyi-genealogy">
+      <h2>曲艺谱系 · 相声与梨园</h2>
+      <p class="snapshot-version">固定版本：<a href="https://github.com/accuratep0wer/quyi-genealogy/tree/75a27debdd34d4a5d8140dd2cbbdf34ebe6de1b6"><code>75a27debdd34d4a5d8140dd2cbbdf34ebe6de1b6</code></a></p>
+      <p>将公开资料中的人物与传承关系整理为可浏览的谱系。项目包含相声师承图谱，以及以京剧为主的梨园谱系；通过人物、关系和出处，探索演艺传统的传承脉络。</p>
+      <ul>
+        <li>支持家谱式谱系图、2D 星云图与全景网络视图，以及人物查询、聚焦和关系筛选。</li>
+        <li>分别组织师承、亲缘、固定搭档和团体资料，并提供人物及关系详情中的来源链接。</li>
+        <li>此版本的相声资料收录 2,054 人、2,531 条关系；这些是该版本的整理统计，不是对历史完整性的承诺。</li>
+        <li>有据资料与存疑线索保留区别。补充核对仅覆盖部分关系，来源数量也不代表证据相互独立。</li>
+      </ul>
+      <figure><a href="quyi-genealogy.jpg"><img src="quyi-genealogy.jpg" width="1000" height="750" alt="以朱绍文为中心的相声谱系视图，展示关系线、来源详情和存疑标记"></a><figcaption>从实际部署的相声页面截取，以朱绍文为中心显示一代上下的关系；截图包含来源详情和存疑标记。</figcaption></figure>
+      <nav class="snapshot-links" aria-label="曲艺项目链接"><a href="https://accuratep0wer.github.io/quyi-genealogy/">相声演示</a><a href="https://accuratep0wer.github.io/quyi-genealogy/liyuan/">梨园演示</a><a href="https://github.com/accuratep0wer/quyi-genealogy">GitHub 仓库</a><a href="https://github.com/accuratep0wer/quyi-genealogy/tree/75a27debdd34d4a5d8140dd2cbbdf34ebe6de1b6">此快照的源码</a></nav>
+    </article>
+  </main>
+  <footer>截图、简介和版本编号固定于本页日期。<a href="snapshot.json">查看快照元数据</a> · <a href="../../#project-snapshots">返回个人主页</a></footer>
+</body>
+</html>

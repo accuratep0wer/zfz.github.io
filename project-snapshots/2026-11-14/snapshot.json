@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-11-14",
+  "description": "Fixed screenshots and summaries of the listed source revisions. Live demo URLs may change independently.",
+  "projects": [
+    {
+      "id": "hanzi-token-lab",
+      "title": "Hanzi Token Lab · 多语言 Token 对照台",
+      "repository": "https://github.com/accuratep0wer/hanzi-token-lab",
+      "commit": "c3638228ebe1f3dd93f6bb866addca90b08f71d7",
+      "source_snapshot": "https://github.com/accuratep0wer/hanzi-token-lab/tree/c3638228ebe1f3dd93f6bb866addca90b08f71d7",
+      "live_demo": "https://accuratep0wer.github.io/hanzi-token-lab/",
+      "image": "hanzi-token-lab.jpg",
+      "capture": {
+        "url": "https://accuratep0wer.github.io/hanzi-token-lab/?v=global-token-ids-20261114",
+        "input": "人工智能，让不同语言在同一张表里相遇。",
+        "language": "zh",
+        "captured_at": "2026-11-14T22:13:12.703Z",
+        "method": "Native browser screenshot of deployed page; local tokenizers only; no API credentials or provider calls.",
+        "width": 1020,
+        "height": 744
+      }
+    },
+    {
+      "id": "quyi-genealogy",
+      "title": "Quyi Genealogy · 相声与梨园谱系",
+      "repository": "https://github.com/accuratep0wer/quyi-genealogy",
+      "commit": "75a27debdd34d4a5d8140dd2cbbdf34ebe6de1b6",
+      "source_snapshot": "https://github.com/accuratep0wer/quyi-genealogy/tree/75a27debdd34d4a5d8140dd2cbbdf34ebe6de1b6",
+      "live_demo": "https://accuratep0wer.github.io/quyi-genealogy/",
+      "liyuan_demo": "https://accuratep0wer.github.io/quyi-genealogy/liyuan/",
+      "image": "quyi-genealogy.jpg",
+      "capture": {
+        "url": "https://accuratep0wer.github.io/quyi-genealogy/?snapshot=20261114#graph/p0002",
+        "captured_at": "2026-11-14T22:16:04.118Z",
+        "method": "Native browser screenshot of the deployed Xiangsheng view; focused on Zhu Shaowen with one generation up and down.",
+        "visible_people": 11,
+        "visible_relationships": 15,
+        "width": 1000,
+        "height": 750
+      },
+      "data_at_revision": {
+        "xiangsheng_people": 2054,
+        "xiangsheng_relationships": 2531,
+        "note": "Collection counts, not a claim of completeness or comprehensive historical verification."
+      }
+    }
+  ]
+}
