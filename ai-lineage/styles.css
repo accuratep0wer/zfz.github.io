@@ -23,3 +23,9 @@
 #source-summary{padding:12px 0;font-size:12px}.summary-row{display:flex;justify-content:space-between;gap:20px;padding:8px 0;border-bottom:1px solid #dfd7ca}.summary-row span{font-variant-numeric:tabular-nums;text-align:right}.summary-row strong{font-weight:600}#source-summary p{max-width:90ch;color:#817465}
 
 .case-review{margin-top:15px}.case-card{margin:8px 0;padding:9px 12px;border:1px solid #dfd4c4;border-radius:5px;background:#fffcf6}.case-card>summary{display:flex;justify-content:space-between;gap:12px}.case-card summary strong{font-weight:600}.case-status{font-size:11px;color:#8b765f;white-space:nowrap}.case-evidence{padding:5px 12px;border-left:2px solid #cfbba0;margin:9px 0}.case-evidence p{margin:0}.case-evidence .source-date{font-size:10px}
+
+/* Keep the complete roster searchable without extending the page by 150 cards. */
+.faculty-counts{display:flex;flex-wrap:wrap;gap:.4rem;margin:1rem 0}
+#faculty-roster-search{display:block;width:min(100%,30rem);margin:.5rem 0;padding:.65rem;border:1px solid var(--line,#ddd2c4);border-radius:.4rem;background:#fffefb;color:inherit}
+.faculty-roster-list{max-height:32rem;overflow:auto;overscroll-behavior:contain;padding-right:.35rem}
+.faculty-roster-list .source-entry{overflow-wrap:anywhere}
