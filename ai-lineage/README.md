@@ -5,11 +5,11 @@ A bilingual, source-linked explorer of academic mentorship and coauthorship.
 - [Open the atlas](https://accuratep0wer.github.io/zfz.github.io/ai-lineage/)
 - [Project snapshots](https://accuratep0wer.github.io/zfz.github.io/)
 
-This published snapshot contains 25,803 candidate people, 28,939 mentorship records, 176 coauthor pairs and 45 selected lineage roots. It is not a worldwide census of AI researchers. The 100-name diagnostic checklist has 12 unresolved cases after reviewing all 34 previously outstanding cases; each case retains its sources and explanation.
+This published snapshot contains 25,831 candidate people, 28,979 mentorship records, 179 coauthor pairs and 45 selected lineage roots. It is not a worldwide census of AI researchers. The 100-name diagnostic checklist has 12 unresolved cases after reviewing all 34 previously outstanding cases; each case retains its sources and explanation. That fixed diagnostic roster does not include every researcher added in subsequent source-backed corrections.
 
 The interface supports Chinese and English, name search, eight broad research categories, source dates, and browser-local drafts. Drafts are not uploaded or synchronized. No model API keys or backend account are required.
 
-Information was compiled as of **2026-11-17**; publication date **2026-11-18**. Publication does not imply that every source was rechecked on that date. Researcher institutions can reflect historical source records.
+Information was compiled as of **2026-11-18**; publication date **2026-11-18**. Publication does not imply that every source was rechecked on that date. Researcher institutions can reflect historical source records.
 
 ## Sources and attribution
 

@@ -6,7 +6,7 @@ export const RESEARCH_AREAS = [
  {id:'robotics',zh:'机器人与强化学习',en:'Robotics & reinforcement learning',tags:'robotics|rl|control|control theory|reinforcement learning|机器人|强化学习|控制理论'},
  {id:'cognition',zh:'认知与神经科学',en:'Cognition & neuroscience',tags:'neuro|neuroscience|cognitive_science|cognitive science|psych|psychology|npath|alzh|ntrauma|psyphys|chronobiology|behavior|hypnosis|insectneuropeptides|认知科学|神经科学|心理学'},
  {id:'trustworthy',zh:'人工智能安全与治理',en:'AI safety & governance',tags:'safety|alignment|interpretability|robustness|ai safety|ai alignment|ai governance|ai ethics|fairness|privacy|security|AI 治理|智能体安全|可扩展监督|可信 AI|隐私与安全|可解释性|鲁棒性|合作 AI|人机协作'},
- {id:'computing',zh:'计算机与工程',en:'Computing & engineering',tags:'ai|computerscience|computer science|engineering|etree|infoscience|artificial intelligence|symbolic ai|reasoning|automated reasoning|planning|knowledge representation|符号 AI|知识表示|逻辑推理|规划与推理|算法博弈论|人工智能'},
+ {id:'computing',zh:'计算机与工程',en:'Computing & engineering',tags:'ai|computerscience|computer science|engineering|etree|infoscience|artificial intelligence|symbolic ai|reasoning|automated reasoning|planning|knowledge representation|game theory|computational game theory|algorithmic game theory|multi-agent systems|multiagent systems|博弈论|多智能体|符号 AI|知识表示|逻辑推理|规划与推理|算法博弈论|人工智能'},
  {id:'interdisciplinary',zh:'其他交叉学科',en:'Other interdisciplinary fields',tags:''}
 ];
 const key=value=>String(value||'').normalize('NFKC').toLowerCase().trim().replace(/[_\s]+/g,' ');

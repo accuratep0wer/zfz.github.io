@@ -184,7 +184,8 @@ $('graph-export').addEventListener('click',()=>download({schema_version:1,scope:
 async function initialize(){try{await loadDataTranslations();applyStatic();const response=await fetch('./data/graph.json');if(!response.ok)throw Error('数据文件尚未生成，请待收集完成后刷新。');data=await response.json();coverageAudit=await fetch('./data/coverage-audit.json').then(r=>r.ok?r.json():null).catch(()=>null);caseReview=await fetch('./data/review34.json').then(r=>r.ok?r.json():null).catch(()=>null);if(!Array.isArray(data.people)||!Array.isArray(data.relations))throw Error('数据快照格式无效。');people=data.people.slice().sort((a,b)=>a.name.localeCompare(b.name));byId=new Map(people.map(p=>[p.id,p]));allEdges=data.relations.filter(e=>byId.has(e.source)&&byId.has(e.target)&&names[e.type]);mentorEdges=allEdges.filter(isMentor);seeds=data.seeds||[];makeIndexes();
  try{const saved=JSON.parse(localStorage.getItem(draftKey));if(saved?.schema_version===1&&Array.isArray(saved.drafts)&&saved.drafts.length<=500)drafts=saved.drafts.map(validatedDraft);}catch{drafts=[];status('已有本地草稿无法读取；未覆盖原数据，可先导出浏览器原始记录再处理。',true);}
  $('stat-people').textContent=format(people.length);$('stat-mentors').textContent=format(mentorEdges.length);$('stat-coauthors').textContent=format(allEdges.filter(e=>e.type==='coauthor').length);$('stat-seeds').textContent=format(seeds.length);
- selected=byId.has('aft:1446')?'aft:1446':byId.has('aft:10457')?'aft:10457':seedId(seeds[0])||people[0]?.id;$('depth-filter').value='1';
+ const requestedPerson=new URLSearchParams(location.search).get('person');
+ selected=byId.has(requestedPerson)?requestedPerson:byId.has('aft:1446')?'aft:1446':byId.has('aft:10457')?'aft:10457':seedId(seeds[0])||people[0]?.id;$('depth-filter').value='1';
  refreshLanguage();$('loading').hidden=true;$('app').hidden=false;computeVisible();resize();
  }catch(error){$('loading').textContent=phrase('未能载入图谱：','Could not load the graph: ')+t(error.message);}}
 
